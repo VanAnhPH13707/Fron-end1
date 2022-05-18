@@ -11,6 +11,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { NameComponent } from './name/name.component';
 import { PriceComponent } from './price/price.component';
 import { FormComponent } from './form/form.component';
+import { ShowValComponent } from './components/show-val/show-val.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormComponent } from './form/form.component';
     IdentityComponent,
     NameComponent,
     PriceComponent,
-    FormComponent
+    FormComponent,
+    ShowValComponent
   ],
   imports: [
     BrowserModule,
