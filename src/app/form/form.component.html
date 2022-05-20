@@ -3,7 +3,7 @@
 <form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <div class="form-group">
         <input type="hidden" class="form-control" name="id" [(ngModel)]="inputValues.id" required minlength="5"
-            maxlength="32" #name="ngModel">
+            maxlength="32" #id="ngModel">
     </div>
     <div class="form-group">
         <label for="">Tên user</label>
@@ -56,7 +56,7 @@
                 <td>{{user.email}}</td>
                 <td>{{user.sdt}}</td>
                 <td>
-                    <button class="btn btn-primary">Sửa</button>
+                    <button class="btn btn-primary" (click)="onEdit(users, user.id)">Sửa</button>
                     <button class="btn btn-danger" (click)="onRemove(user.id)">Xóa</button>
                 </td>
             </tr>
