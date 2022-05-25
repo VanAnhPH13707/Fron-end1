@@ -12,6 +12,9 @@ import { NameComponent } from './name/name.component';
 import { PriceComponent } from './price/price.component';
 import { FormComponent } from './form/form.component';
 import { ShowValComponent } from './components/show-val/show-val.component';
+import { UserComponent } from './user/user.component';
+import { ListComponent } from './user/list/list.component';
+import { UserFormComponent } from './user/form/form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ShowValComponent } from './components/show-val/show-val.component';
     NameComponent,
     PriceComponent,
     FormComponent,
-    ShowValComponent
+    ShowValComponent,
+    UserComponent,
+    ListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
