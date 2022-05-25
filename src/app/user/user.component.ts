@@ -38,12 +38,32 @@ export class UserComponent implements OnInit {
   };
   onCreateUser(newUser:any){
     console.log(newUser);
+    if(newUser.id === 0){
+      const userIds = this.users.map(user => user.id).sort((a,b) => (b-a));
+      const newId = userIds[0]
+      console.log(newId);
+      return this.users.push({
+        id: newId +1,
+        ...newUser
+      });
+      
+    }
+    return this.users.forEach((user ,index)=> {
+      if(user.id === newUser.id){
+        this.users[index] = newUser;
+      }
+    });
     
   }
   onEditUser(userId: number){
     const editUser= this.users.find(user => user.id === userId)
     if(editUser){
       this.formValues = {...editUser};
+    }
+  }
+  onDelUser(userId: number){
+    if(userId){
+      this.users = this.users.filter(user => user.id !== userId)
     }
   }
 }

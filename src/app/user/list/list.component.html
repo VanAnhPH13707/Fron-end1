@@ -18,7 +18,7 @@
                 <td>{{user.sdt}}</td>
                 <td>
                     <button class="btn btn-primary" (click)="onEdit( user.id)">Sửa</button>
-                    <button class="btn btn-danger" >Xóa</button>
+                    <button class="btn btn-danger" (click)="onDelete(user.id)">Xóa</button>
                 </td>
             </tr>
         </tbody>

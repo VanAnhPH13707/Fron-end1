@@ -15,27 +15,14 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // inputValues = {
-  //   id: 0,
-  //   name: '',
-  //   age: 0,
-  //   email: '',
-  //   sdt: 0
-  // };
+  
   onSubmit(userForm: NgForm) {
     console.log(userForm.value);
     //3.Bắn dữ liệu , tương tự Input nhưng theo chiều ngược lại
     this.handleSubmit.emit(userForm.value);
     
 
-    //2. Cập nhật giá trị của inputValues về default
-    // userForm.resetForm({
-    //   id: 0,
-    //   name: '',
-    //   age: 0,
-    //   email: '',
-    //   sdt: 0
-    // });
+    
   }
 
 }

@@ -2,4 +2,4 @@
 (handleSubmit)="onCreateUser($event)" 
 [inputValues]="formValues"
 ></app-user-form>
-<app-user-list [users]="users" (handleEdit)="onEditUser($event)"></app-user-list>
+<app-user-list [users]="users" (handleEdit)="onEditUser($event)" (handleDelete)="onDelUser($event)"></app-user-list>
