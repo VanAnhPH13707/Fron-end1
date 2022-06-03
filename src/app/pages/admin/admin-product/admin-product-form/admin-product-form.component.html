@@ -1,1 +1,14 @@
-<p>admin-product-form works!</p>
+<div>
+    <a routerLink="/admin/products"><button class="btn btn-secondary">Back</button></a>
+</div>
+<!-- Định nghĩa xem form được quản lý bởi biến nào -->
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="">Product Name</label>
+        <!-- định nghĩa input sẽ đượ quản lý bởi key nào -->
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div>
+        <button class="btn btn-success">Submit</button>
+    </div>
+</form>

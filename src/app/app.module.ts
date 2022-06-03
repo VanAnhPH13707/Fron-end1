@@ -11,6 +11,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { NameComponent } from './name/name.component';
 import { PriceComponent } from './price/price.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ShowValComponent } from './components/show-val/show-val.component';
 import { UserComponent } from './user/user.component';
 import { ListComponent } from './user/list/list.component';
@@ -55,6 +56,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     NgbModule, 
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
