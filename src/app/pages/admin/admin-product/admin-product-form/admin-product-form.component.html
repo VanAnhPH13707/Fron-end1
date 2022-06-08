@@ -7,8 +7,10 @@
         <label for="">Product Name</label>
         <!-- định nghĩa input sẽ đượ quản lý bởi key nào -->
         <input type="text" class="form-control" formControlName="name">
+        <!-- <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched) && productForm.get('name')?.errors?.['required']"></span> -->
+        <app-show-val [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-val>
     </div>
     <div>
-        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
     </div>
 </form>

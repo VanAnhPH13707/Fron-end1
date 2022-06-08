@@ -27,6 +27,7 @@
                         <td>
                             <a routerLink="/admin/products/{{product._id}}"><button class="btn btn-info">Detail</button></a>
                             <!-- <a routerLink="['/admin', 'product', product._id]"><button>Detail</button></a> -->
+                            <a routerLink="/admin/products/edit/{{product._id}}"><button class="btn btn-warning">Edit</button></a>
                             <button class="btn btn-danger" (click)="onDelete(product._id)">Delete</button>
                         </td>
                     </tr>
