@@ -27,6 +27,7 @@ import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-p
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { LoginComponent } from './pages/auth/login/login.component';
     AdminProductListComponent,
     AdminProductDetailComponent,
     AdminProductFormComponent,
-    LoginComponent
+    LoginComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

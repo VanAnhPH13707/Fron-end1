@@ -4,4 +4,8 @@
     </div>
     <div>ID SP: {{product._id}}</div>
     <div>Tên SP: {{product.name}}</div>
+    <div>
+        <input type="number" min="1" class="form-control cart-value" [value]="cartValue" (input)="onChangeCartValue($event)">
+        <button class="btn btn-success" (click)="onAddToCart()">Thêm vào giỏ hàng</button>
+    </div>
 </div>
