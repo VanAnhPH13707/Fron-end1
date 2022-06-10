@@ -1,116 +1,116 @@
-<main> 
-    <div class="xl:mx-auto xl:container lg:py-16 lg:px-40 xl:px-20 md:py-12 md:px-6 py-9 px-4">
-        <div class="flex flex-col items-center justify-center">
-            <h1 class="text-4xl font-semibold leading-9 text-amber-500 dark:text-gray-50">DEAL HÔM NAY</h1>
-            <p class="text-base leading-6 text-center text-gray-600 dark:text-white sm:w-96 md:w-9/12 lg:w-5/12 mt-4">Sản phẩm thời trang cực hot</p>
-        </div>      
-        <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-y-12 lg:gap-x-8 sm:gap-y-10 sm:gap-x-6 gap-y-6 lg:mt-12 mt-10">
-            <div class="relative">
-                <div class="absolute top-0 left-0 py-2 px-4 bg-white bg-opacity-50"><p class="text-xs leading-3 text-gray-800">New</p></div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/HqmJYgW/gs-Kd-Pc-Iye-Gg.png" alt="A girl Posing Image" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
+<div class="bg-gray-100">
+    <div class="pt-10 py-10">
+        <main class="max-w-7xl mx-auto bg-white px-4 sm:px-6 lg:px-8 ">
+            <section aria-labelledby="products-heading" class="pt-6 pb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
+                    <form class="hidden lg:block border-r border-gray-200 ">
+                        <h3 class="text-lg font-medium text-gray-900 space-y-4 pb-2 border-b">Danh mục</h3>
+                        <ul class="text-sm font-medium text-gray-900 space-y-4 pb-6 pt-2">
+                           
+                            <li *ngFor="let cate of category">
+                                <a class='focus:outline-none focus:border-b-4 focus:border-indigo-500' routerLink="" >{{cate.name}}</a>
+                                
+                            </li>
+                            <li>
+                                <a class='focus:outline-none focus:border-b-4 focus:border-indigo-500' routerLink="">Sách tiếng Việt </a>
+                            </li>
+                            <li>
+                                <a class='focus:outline-none focus:border-b-4 focus:border-indigo-500' routerLink="">Văn phòng phẩm</a>
+                            </li>
+                            <li>
+                                <a class='focus:outline-none focus:border-b-4 focus:border-indigo-500' routerLink="">Tâm lý học </a>
+                            </li>
+                            <li>
+                                <a class='focus:outline-none focus:border-b-4 focus:border-indigo-500' routerLink="">Quà lưu niệm </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="border-b border-gray-200 py-12">
+                            <h3 class="text-lg font-medium text-gray-900 space-y-4 pb-2 border-b">Nơi bán</h3>
+                            <div>
+                                <div class="">
+                                    <div class="pt-4">
+                                        <input class="w-4 h-4 mr-2" type="checkbox" id="Leather" name="Leather" value="Leather" />
+                                        <div class="inline-block">
+                                            <div class="flex space-x-6 justify-center items-center">
+                                                <label class="mr-2 text-sm leading-3 dark:text-gray-300 font-normal text-gray-600">Hà Nội</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <input class="w-4 h-4 mr-2" type="checkbox" id="Cotton" name="Cotton" value="Cotton" />
+                                        <div class="inline-block">
+                                            <div class="flex space-x-6 justify-center items-center">
+                                                <label class="mr-2 text-sm leading-3 dark:text-gray-300 font-normal text-gray-600" >Hồ Chí Minh</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <input class="w-4 h-4 mr-2" type="checkbox" id="Fabric" name="Fabric" value="Fabric" />
+                                        <div class="inline-block">
+                                            <div class="flex space-x-6 justify-center items-center">
+                                                <label class="mr-2 text-sm leading-3 dark:text-gray-300 font-normal text-gray-600" >Đà Nẵng</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <input class="w-4 h-4 mr-2" type="checkbox" id="Crocodile" name="Crocodile" value="Crocodile" />
+                                        <div class="inline-block">
+                                            <div class="flex space-x-6 justify-center items-center">
+                                                <label class="mr-2 text-sm leading-3 dark:text-gray-300 font-normal text-gray-600" >Thanh Hóa</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <input class="w-4 h-4 mr-2" type="checkbox" id="Wool" name="Wool" value="Wool" />
+                                        <div class="inline-block">
+                                            <div class="flex space-x-6 justify-center items-center">
+                                                <label class="mr-2 text-sm leading-3 dark:text-gray-300 font-normal text-gray-600" >Cần Thơ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <input class="w-4 h-4 mr-2" type="checkbox" id="Wool" name="Wool" value="Wool" />
+                                        <div class="inline-block">
+                                            <div class="flex space-x-6 justify-center items-center">
+                                                <label class="mr-2 text-sm leading-3 dark:text-gray-300 font-normal text-gray-600" >Thái Nguyên</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <div class="w-screen">
+                        <div >
+                            <a routerLink=""><img class="max-w-4xl text-center pl-1" src="https://salt.tikicdn.com/cache/w1080/ts/banner/1a/e3/58/db35d8d6abed8e09d693fdf4b75c22a6.jpg.webp" alt=""/></a>
+                        </div>
+                        <ul class="w-screen flex py-6 ">
+                            <li><a routerLink="" class="px-4 text-blue-800 hover:text-blue-600 border-b-2 border-blue-800">Phổ biến</a></li>
+                            <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Bán chạy</a></li>
+                            <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Hàng mới</a></li>
+                            <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Giá thấp</a></li>
+                            <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Giá cao</a></li>
+                        </ul>
+                        <div>
+                        <div class="w-3/5 grid grid-cols-4 gap-4 pl-1">                
+                            <div *ngFor="let product of products" class="px-7 py-3 border-2 hover:shadow-md"> 
+                                <a href="/product-detail/{{product._id}}">
+                                    <div class=""><img src="{{product.image}}" alt=""></div>
+                                    <p class="py-2 text-left text-xs">{{product.name}}</p>
+                                    <p class="font-bold text-left "> {{product.price}}
+                                        <span class="underline">đ</span>
+                                        <span class="" ></span>
+                                    </p>
+                                </a>
+                            </div>  
+                                   
+                        </div>
+                        </div>
                     </div>
                 </div>
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Wilfred Alana Dress</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1550</p>
-                <p class="font-normal dark:text-gray-300 text-base leading-4 text-gray-600 mt-4">2 colours</p>
-            </div>
-            <div class="relative">
-                <div class="bg-white bg-opacity-50 absolute top-0 right-0 px-2 py-1"><p class="text-white fonr-normal text-base leading-4">XS , S , M , L</p></div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/m6V0MzR/gs-Kd-Pc-Iye-Gg-1.png" alt="A girl wearing white suit and googgles" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Wilfred Alana Dress</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1800</p>
-            </div>
-            <div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/6g1KhhF/pexels-django-li-2956641-1.png" alt="A girl wearing dark blue suit and posing" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Wilfred Alana Dress</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1550</p>
-                <p class="font-normal dark:text-gray-300 text-base leading-4 text-gray-600 mt-4">2 colours</p>
-            </div>
-            <div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/KLDN7Vt/gbarkz-vq-Knu-G8-Ga-Qc-unsplash.png" alt="A girl posing and wearing white suit" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-
-                <p class="font-normal text-xl dark:text-white leading-5 text-gray-800 md:mt-6 mt-4">Flared Cotton Tank Top</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1800</p>
-            </div>
-            <div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/5vxgf7V/pexels-quang-anh-ha-nguyen-884979-1.png" alt="Girl posing for an Image" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Flared Cotton Tank Top</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1800</p>
-            </div>
-            <div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/HKFXSrQ/pietra-schwarzler-l-SLq-x-Qd-FNI-unsplash.png" alt="A blonde girl posing" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Wilfred Alana Dress</p>
-                <p class="font-semibold text-xl leading-5 text-gray-800 mt-4">$1550</p>
-                <p class="font-normal dark:text-gray-300 text-base leading-4 text-gray-600 mt-4">2 colours</p>
-            </div>
-            <div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/BKsqym2/tracey-hocking-ve-Zp-XKU71c-unsplash.png" alt="A girl wearing white suit posing in desert" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Flared Cotton Tank Top</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1800</p>
-            </div>
-            <div>
-                <div class="relative group">
-                    <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
-                    <img class="w-full" src="https://i.ibb.co/mbrk1DK/pexels-h-i-nguy-n-4034532.png" alt="Girl wearing pink suit posing" />
-                    <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                        <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to bag</button>
-                        <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick View</button>
-                    </div>
-                </div>
-
-                <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">Flared Cotton Tank Top</p>
-                <p class="font-semibold dark:text-gray-300 text-xl leading-5 text-gray-800 mt-4">$1800</p>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
-</main>
+</div >

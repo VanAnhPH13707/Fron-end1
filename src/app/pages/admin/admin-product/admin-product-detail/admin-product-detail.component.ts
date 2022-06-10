@@ -21,7 +21,16 @@ export class AdminProductDetailComponent implements OnInit {
     this._id = '';
     this.product = {
       _id: 0,
-      name: ''
+      author: '',
+      name: '',
+      price: 0,
+      image:'',
+      desc: '',
+      sale_price: 0,
+      category: '',
+      status: 0
+      
+
     };
     this.cartValue = 1;
    }
@@ -43,8 +52,8 @@ export class AdminProductDetailComponent implements OnInit {
       value: +this.cartValue
     };
 
-    this.lsService.setItem(addItem);
-    this.cartValue = 1;
+    // this.lsService.setItem(addItem);
+    // this.cartValue = 1;
   }
 
 

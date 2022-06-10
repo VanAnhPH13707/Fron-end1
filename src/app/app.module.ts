@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ChampComponent } from './champ/champ.component';
 import { TableComponent } from './table/table.component';
 import { DameComponent } from './dame/dame.component';
 import { IdentityComponent } from './identity/identity.component';
@@ -32,7 +31,6 @@ import { CartComponent } from './components/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ChampComponent,
     TableComponent,
     DameComponent,
     IdentityComponent,

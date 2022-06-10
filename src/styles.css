@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+}

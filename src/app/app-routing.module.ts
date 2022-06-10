@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutClientComponent } from './about-client/about-client.component';
-import { ChampComponent } from './champ/champ.component';
 import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 import { HomeClientComponent } from './home-client/home-client.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
@@ -12,7 +11,7 @@ import { AdminProductListComponent } from './pages/admin/admin-product/admin-pro
 import { LoginComponent } from './pages/auth/login/login.component';
 import { ProductClientComponent } from './product-client/product-client.component';
 import { ProductDetailClientComponent } from './product-detail-client/product-detail-client.component';
-import { UserComponent } from './user/user.component';
+
 
 
 const routes: Routes = [
@@ -27,6 +26,10 @@ const routes: Routes = [
       {
         path:'products',
         component: ProductClientComponent
+      },
+      {
+        path:'product-detail/:id',
+        component: ProductDetailClientComponent
       },
       {
         path: 'about',
