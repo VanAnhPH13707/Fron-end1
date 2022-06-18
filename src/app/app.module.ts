@@ -27,6 +27,10 @@ import { AdminProductFormComponent } from './pages/admin/admin-product/admin-pro
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +55,11 @@ import { CartComponent } from './components/cart/cart.component';
     AdminProductDetailComponent,
     AdminProductFormComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    AdminCategoryFormComponent,
+    AdminCategoryListComponent,
+    AdminUserListComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

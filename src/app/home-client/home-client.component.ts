@@ -34,7 +34,7 @@ export class HomeClientComponent implements OnInit {
     })
   }
   onListCate(_id:string){
-    this.productService.getProductFilter(_id).subscribe((data) => {
+    this.productService.getProducts().subscribe((data) => {
       this.products = data;
     })
   }

@@ -1,5 +1,8 @@
 export type Category = {
-    _id: string,
+    _id: number,
     name: string,
     status: number
 }
+export type CategoryCreate = {
+    name: string
+};

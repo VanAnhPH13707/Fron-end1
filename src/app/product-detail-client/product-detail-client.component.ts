@@ -18,7 +18,7 @@ export class ProductDetailClientComponent implements OnInit {
     private productService: ProductService,
     private lsService: LocalStorageService
   ) {
-    this._id = '';
+    this._id = "";
     this.product = {
       _id: 0,
       author: '',

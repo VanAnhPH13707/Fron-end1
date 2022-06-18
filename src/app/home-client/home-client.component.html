@@ -1,9 +1,9 @@
-<div class="bg-gray-100">
+<div class="abc bg-gray-100">
     <div class="pt-10 py-10">
         <main class="max-w-7xl mx-auto bg-white px-4 sm:px-6 lg:px-8 ">
             <section aria-labelledby="products-heading" class="pt-6 pb-24">
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
-                    <form class="hidden lg:block border-r border-gray-200 ">
+                <div class="flex">
+                    <form class="flex-initial w-full hidden lg:block border-r border-gray-200 ">
                         <h3 class="text-lg font-medium text-gray-900 space-y-4 pb-2 border-b">Danh mục</h3>
                         <ul class="text-sm font-medium text-gray-900 space-y-4 pb-6 pt-2">
                            
@@ -82,11 +82,11 @@
                         </div>
                         
                     </form>
-                    <div class="w-screen">
+                    <div class="w-full pl-10 pr-5">
                         <div >
                             <a routerLink=""><img class="max-w-4xl text-center pl-1" src="https://salt.tikicdn.com/cache/w1080/ts/banner/1a/e3/58/db35d8d6abed8e09d693fdf4b75c22a6.jpg.webp" alt=""/></a>
                         </div>
-                        <ul class="w-screen flex py-6 ">
+                        <ul class="flex py-6 ">
                             <li><a routerLink="" class="px-4 text-blue-800 hover:text-blue-600 border-b-2 border-blue-800">Phổ biến</a></li>
                             <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Bán chạy</a></li>
                             <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Hàng mới</a></li>
@@ -94,7 +94,7 @@
                             <li><a routerLink="" class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Giá cao</a></li>
                         </ul>
                         <div>
-                        <div class="w-3/5 grid grid-cols-4 gap-4 pl-1">                
+                        <div class="grid grid-cols-4 gap-4 pl-1">                
                             <div *ngFor="let product of products" class="px-7 py-3 border-2 hover:shadow-md"> 
                                 <a href="/product-detail/{{product._id}}">
                                     <div class=""><img src="{{product.image}}" alt=""></div>

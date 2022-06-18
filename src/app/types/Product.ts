@@ -10,7 +10,15 @@ export type Product = {
     status: number
 };
 export type ProductCreate = {
-    name: string
+    author: string,
+    name: string,
+    image: string,
+    price: number,
+    sale_price: number,
+    desc: string,
+    category: string,
+    status: number,
+    value: number
 };
 export type ProductCart = {
     _id: number,
