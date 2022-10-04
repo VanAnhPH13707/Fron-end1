@@ -2,67 +2,75 @@
     <a routerLink="/admin/products"><button class="btn btn-secondary">Back</button></a>
 </div>
 
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()" style="max-width: 600px">
-    <div class="form-group">
-        <label class="control-label" for="">DANH MỤC SẢN PHẨM</label>
-        <div class="">
-            <select id="" name="Danh mục" class="form-control" formControlName="category">
-                <option *ngFor="let cate of category" value="{{cate._id}}">{{cate.name}}</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="">Tên sản phẩm</label>
-        <div class="">
-            <input id="product_name" placeholder="Tên sản phẩm" class="form-control input-md" formControlName="name"
-                required="" type="text">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="author">Tác giả</label>
-        <div class="">
-            <input id="author" name="author" placeholder="Tác giả" class="form-control input-md" required="" formControlName="author"
-                type="text">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="filebutton">Ảnh</label>
-        <div class="">
-            <input id="filebutton" name="filebutton" class="input-file" type="file" formControlName="image" (change)="onChange($event)">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="price">Giá </label>
-        <div class="">
-            <input id="price" placeholder="Giá niêm yết" class="form-control input-md" formControlName="price"
-                required="" type="number">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="sale_price">Giảm giá (%) </label>
-        <div class="">
-            <input id="sale_price" placeholder="" class="form-control input-md" formControlName="sale_price"
-                required="" type="number">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="product_description">MÔ TẢ</label>
-        <div class="">                     
-          <textarea class="form-control" id="product_description"  formControlName="desc"></textarea>
-        </div>
-      </div>
-    <!-- <div class="form-group">
-        <label for="">Product Name</label>
-        <input type="text" class="form-control" formControlName="name">
-        <app-show-validate 
-            [field]="productForm.get('name')"
-            key="Tên sản phẩm"
-        ></app-show-validate>
-    </div> -->
-    <div>
-        <button class="btn btn-success">Submit</button>
-    </div>
+<div class="min-h-full">
+     <div class="max-w-5xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Định nghĩa xem form được quản lý bởi biến nào -->
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()" style="max-width: 600px">
+            <div class="form-group">
+                <label class="control-label font-bold" for="">Danh mục sản phẩm</label>
+                <div class="">
+                    <select id="" name="Danh mục" class="form-control" formControlName="category">
+                        <option *ngFor="let cate of category" value="{{cate._id}}">{{cate.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label font-bold" for="">Tên sản phẩm</label>
+                <div class="">
+                    <!-- định nghĩa input sẽ được quản lý bởi key nào bằng formControlName -->
+                    <input id="product_name" placeholder="Tên sản phẩm" class="form-control input-md" formControlName="name"
+                        required="" type="text">
+                </div>
+                <app-show-val [field]="productForm.get('name')" key="tên sản phẩm"></app-show-val>
+                
+            </div>
+            <div class="form-group">
+                <label class="control-label font-bold" for="author">Tác giả</label>
+                <div class="">
+                    <input id="author" name="author" placeholder="Tác giả" class="form-control input-md" required="" formControlName="author"
+                        type="text">
+                </div>
+                <app-show-val [field]="productForm.get('author')" key="tác giả"></app-show-val>
+            </div>
+            <div class="form-group">
+                <label class="control-label font-bold" for="filebutton">Ảnh</label>
+                <div class="">
+                    <input id="filebutton" name="filebutton" class="input-file" type="file" formControlName="image" (change)="onChange($event)">
+                </div>
+                <div>
+                    <img src={{this.img}} alt="" style="width: 200px; margin-top: 5px; border-radius: 10px">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label font-bold" for="price">Giá </label>
+                <div class="">
+                    <input id="price" placeholder="Giá niêm yết" name="price" class="form-control input-md" formControlName="price"
+                        required="" type="number">
+                </div>
+                <app-show-val [field]="productForm.get('price')" key="giá sản phẩm"></app-show-val>
+            </div>
+            <div class="form-group">
+                <label class="control-label font-bold" for="sale_price">Giảm giá (%) </label>
+                <div class="">
+                    <input id="sale_price" placeholder="" name="sale_price" class="form-control input-md" formControlName="sale_price"
+                        required="" type="number">
+                </div>
+                <app-show-val [field]="productForm.get('price')" key="giá sản phẩm"></app-show-val>
+            </div>
+            <div class="form-group">
+                <label class="control-label font-bold" for="product_description">Mô tả</label>
+                <div class="">                     
+                <textarea class="form-control" id="product_description" name="product_description" formControlName="desc"></textarea>
+                </div>
+                <app-show-val [field]="productForm.get('desc')" key="mô tả"></app-show-val>
+            </div>
+            <div>
+                <button class="btn btn-success mt-2">Submit</button>
+            </div>
+            
+        </form>
     
-</form>
+    </div>
+</div>
 
 

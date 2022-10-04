@@ -24,7 +24,5 @@ export class AuthService {
   getUser(_id: string): Observable <User> {
     return this.http.get<User>(`${environment.users}/${_id}`);
   }
-  updateUser(_id: number | string, data: User): Observable<User>{
-    return this.http.put<User>(`${environment.users}/${_id}`, data)
-  }
+  
 }

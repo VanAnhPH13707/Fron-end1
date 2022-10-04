@@ -22,7 +22,7 @@ export class AdminProductFormComponent implements OnInit {
     private ProductService: ProductService, //cung cấp create cho 
     private router: Router, 
     private CategoryService: CategoryService,
-    private fileUploadService: FileUploadService, //cung cấp navigate điều hướng
+    private fileUploadService: FileUploadService, 
     private activateRoute: ActivatedRoute // lấy ra tham số url
   ) { 
     this.productForm = new FormGroup({
@@ -30,7 +30,7 @@ export class AdminProductFormComponent implements OnInit {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(32),
-        this.onValidateNameHasProduct
+        // this.onValidateNameHasProduct
       ] ),
       category: new FormControl(''),
       author: new FormControl(''),
@@ -55,7 +55,7 @@ export class AdminProductFormComponent implements OnInit {
     if(this.productId){
       this.ProductService.getProduct(this.productId).subscribe(data =>{
         // console.log(data);
-        
+        this.imgOld = data.image
         // gán giá trị cho form
         this.productForm.patchValue({
           name: data.name,

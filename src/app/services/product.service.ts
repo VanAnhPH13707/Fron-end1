@@ -14,9 +14,6 @@ export class ProductService {
   getProducts(): Observable<Product[]>{
     return this.http.get<Product[]>(environment.products)
   }
-  // getProductFilter(_id:string): Observable<Product[]>{
-  //   return this.http.get<Product[]>(`${environment.products}/${_id}`)
-  // }
   getProduct(_id:string): Observable<Product>{
     return this.http.get<Product>(`${environment.products}/${_id}`);
   }

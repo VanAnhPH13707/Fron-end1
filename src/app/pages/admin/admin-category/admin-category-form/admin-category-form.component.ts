@@ -21,10 +21,9 @@ export class AdminCategoryFormComponent implements OnInit {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(32),
-        this.onValidateNameHasCategory
       ] )
     })
-    this. categoryId = "0";
+    this. categoryId = "";
   }
 
   ngOnInit(): void {
@@ -55,14 +54,14 @@ export class AdminCategoryFormComponent implements OnInit {
     //1: lấy dữ liệu từ form
     const submitData = this.categoryForm.value;
 
-    if(this.categoryId !== "0" || this.categoryId !== undefined){
-       this.CategoryService.updateCategory(this.categoryId, submitData).subscribe(data =>{
+    if(this.categoryId !== "0" && this.categoryId !== undefined){
+      return this.CategoryService.updateCategory(this.categoryId, submitData).subscribe(data =>{
         this.router.navigateByUrl('/admin/category')
       })
     }
 
     //2: callAPI (cần định nghĩa service và router điều hướng)
-    this.CategoryService.createCategory(submitData).subscribe((data) => {
+    return this.CategoryService.createCategory(submitData).subscribe((data) => {
       //3: sau khi api call thành công thì sẽ điều hướng về danh sách
       // this.router.navigate(['/admin', 'product'])
       this.router.navigateByUrl("/admin/category")

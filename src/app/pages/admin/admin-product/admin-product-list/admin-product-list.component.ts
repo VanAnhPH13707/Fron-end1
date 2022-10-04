@@ -9,14 +9,18 @@ import { Product } from 'src/app/types/Product';
 })
 export class AdminProductListComponent implements OnInit {
   products: Product[];
+ 
   constructor(private productService: ProductService) { 
     this.products = [];
+    
   }
 
   ngOnInit(): void {
     this.onGetList()
   }
   onGetList(){
+    //với kiểu dữ liệu trả về là observable thì có phương thức subsribe để lắng nghe
+    // bao giờ có kết quả sẽ trả về qua tham số và thực thi tiếp
     this.productService.getProducts().subscribe((data) =>{
       this.products = data;
     })
@@ -31,5 +35,5 @@ export class AdminProductListComponent implements OnInit {
       })
     }
   }
-
+  
 }

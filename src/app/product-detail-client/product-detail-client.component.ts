@@ -18,6 +18,7 @@ export class ProductDetailClientComponent implements OnInit {
     private productService: ProductService,
     private lsService: LocalStorageService
   ) {
+    // định nghĩa dữ liệu mặc định
     this._id = "";
     this.product = {
       _id: 0,
